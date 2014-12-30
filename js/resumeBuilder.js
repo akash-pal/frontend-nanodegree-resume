@@ -153,20 +153,21 @@ $("#header").append(HTMLskillsStart);
 }
 
 
-for(var i=0;i<2;i++)
+for(i in work.jobs)
 {
     var formattedEmployer = HTMLworkEmployer.replace( "%data%" ,work.jobs[i].employer);
     var formattedTitle = HTMLworkTitle.replace( "%data%" ,work.jobs[i].title);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
+
     var formattedDate = HTMLworkDates.replace( "%data%" ,work.jobs[i].date);
     var formattedWorkLocation = HTMLworkLocation.replace( "%data%" ,work.jobs[i].location);
     var formattedDescription = HTMLworkDescription.replace( "%data%" ,work.jobs[i].description);
 
-    $("#workExperience").prepend(HTMLworkStart);
-    $("#workExperience").append(formattedEmployer);
-    $("#workExperience").append(formattedTitle);
-    $("#workExperience").append(formattedDate);
-    $("#workExperience").append(formattedWorkLocation);
-    $("#workExperience").append(formattedDescription);
+    $("#workExperience").append(HTMLworkStart);
+    $(".work-entry:last").append(formattedEmployerTitle );
+    $(".work-entry:last").append(formattedDate);
+    $(".work-entry:last").append(formattedWorkLocation);
+    $(".work-entry:last").append(formattedDescription);
  
 }
 
