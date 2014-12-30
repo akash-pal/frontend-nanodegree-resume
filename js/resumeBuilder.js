@@ -141,13 +141,17 @@ $("#topContacts").append(formattedLocation);
 
 $("#header").append(formattedbioPic);
 $("#header").append(formattedWelcomeMsg);
-$("#header").append(HTMLskillsStart);
 
-for(var i=0;i<4;i++)
+if(bio.skills.length != 0)
 {
-var formattedSkills = HTMLskills.replace( "%data%" , bio.skills[i]);
-$("#header").append(formattedSkills);
+$("#header").append(HTMLskillsStart);
+  for(var i=0;i<4;i++)
+  {
+    var formattedSkills = HTMLskills.replace( "%data%" , bio.skills[i]);
+    $("#header").append(formattedSkills);
+  }
 }
+
 
 for(var i=0;i<2;i++)
 {
