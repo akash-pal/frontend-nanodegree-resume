@@ -223,3 +223,11 @@ $("#footerContacts").prepend(formattedGitHub);
 $("#footerContacts").prepend(formattedTwitter);
 $("#footerContacts").prepend(formattedEmail);
 $("#footerContacts").prepend(formattedMobile);
+
+
+$(document).click(function(loc){
+
+    var x = loc.pageX;
+    var y = loc.pageY;
+    logClicks(x,y);
+});
