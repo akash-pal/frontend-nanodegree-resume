@@ -231,3 +231,17 @@ $(document).click(function(loc){
     var y = loc.pageY;
     logClicks(x,y);
 });
+
+$("#main").append(internationalizeButton);
+
+var inName = function(finalName){
+
+    var arrayName = finalName.trim().split(' ');
+    var firstName = arrayName[0].toLowerCase();
+    firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1);
+    var lastName = arrayName[1].toUpperCase();
+    finalName = firstName + " " + lastName; 
+    return finalName; 
+    
+}
+
