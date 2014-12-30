@@ -50,6 +50,25 @@ var bio ={
     "picture_URL": "images/AkashPal.jpg"
 }
 
+var work ={
+    "jobs": [
+        {
+            "employer": "ALLSpark Learning",
+            "title": "Summer Internship : Online Course Creator",
+            "date": "June 2014 - July 2014",
+            "location": "Online",
+            "description": "ALLSpark being a multi-featured educational platform ,my work as an intern was to design 4 courses Software Engineering, Operating System, Basic Computing and Web Technology and Basic Computation and Principles of Computer Programming. I design these courses according toa syllabus and it included the study materials, video lectures, notes from various universities and educational institutions all over the world."
+        },
+        {
+            "employer": "JIS College of Engineering : ECell",
+            "title": "Web Developer",
+            "date": "August 2014 - September 2014",
+            "location": "Kalyani, West Bengal , India",
+            "description": "Developed the Entrepreneurship Cell (ECell) website of JIS College of Engineering using ASP.NET"
+        }
+    ]
+}
+
 var formattedName = HTMLheaderName.replace( "%data%" , bio.Name );
 var formattedRole = HTMLheaderRole.replace( "%data%" , bio.role );
 
@@ -80,6 +99,23 @@ for(var i=0;i<4;i++)
 {
 var formattedSkills = HTMLskills.replace( "%data%" , bio.skills[i]);
 $("#header").append(formattedSkills);
+}
+
+for(var i=0;i<2;i++)
+{
+    var formattedEmployer = HTMLworkEmployer.replace( "%data%" ,work.jobs[i].employer);
+    var formattedTitle = HTMLworkTitle.replace( "%data%" ,work.jobs[i].title);
+    var formattedDate = HTMLworkDates.replace( "%data%" ,work.jobs[i].date);
+    var formattedWorkLocation = HTMLworkLocation.replace( "%data%" ,work.jobs[i].location);
+    var formattedDescription = HTMLworkDescription.replace( "%data%" ,work.jobs[i].description);
+
+    $("#workExperience").prepend(HTMLworkStart);
+    $("#workExperience").append(formattedEmployer);
+    $("#workExperience").append(formattedTitle);
+    $("#workExperience").append(formattedDate);
+    $("#workExperience").append(formattedWorkLocation);
+    $("#workExperience").append(formattedDescription);
+ 
 }
 
 $("#footerContacts").prepend(formattedLocation);
