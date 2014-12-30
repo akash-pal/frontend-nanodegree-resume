@@ -102,6 +102,21 @@ var education ={
     ]
 };
 
+var projects={
+    "projects" :[
+    {
+        "title": "USB port visibility controller",
+        "dates": "2014",
+        "description": "In this paper a new steganographic technique using an advanced cryptographic technique has been proposed. In the encryption part of this paper the concept of ASCII value of the English alphabets have been used. Besides this the binary conversion of those ASCII values and the concept of hamming distance measurement are also used here. Multiple Auxiliary keys are generated using one password and after the encryption, the steganographic part is done with the help of grey-scale concept.",
+    },
+    {
+        "title": "Optimized Block Steganography based Crypt Encryption for Secured Data Transfer",
+        "dates": "2013",
+        "description": "A software was developed using visual basic such to prevent unauthorized person access information from a computer system by by plugging in portable devices into USB port. The proposed approach used the Administrator feature in windows to allow only those persons' with the admin password to plug in devices and obtain information.",
+    }
+    ]
+}
+
 var formattedName = HTMLheaderName.replace( "%data%" , bio.Name );
 var formattedRole = HTMLheaderRole.replace( "%data%" , bio.role );
 
@@ -180,6 +195,19 @@ $("#education").append(formattedOnlineTitle);
 $("#education").append(formattedOnlineSchool);
 $("#education").append(formattedOnlineDates);
 $("#education").append(formattedOnlineURL);
+}
+
+for(var i=0;i<2;i++)
+{
+    var formattedTitle = HTMLprojectTitle.replace( "%data%" , projects.projects[i].title);
+    var formattedDates = HTMLprojectDates.replace( "%data%" , projects.projects[i].dates);
+    var formattedDescription= HTMLprojectDescription.replace( "%data%" , projects.projects[i].description);
+
+    $("#projects").append(HTMLprojectStart);
+    $("#projects").append(formattedTitle);
+    $("#projects").append(formattedDates);
+    $("#projects").append(formattedDescription);
+
 }
 
 $("#footerContacts").prepend(formattedLocation);
