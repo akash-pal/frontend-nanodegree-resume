@@ -7,7 +7,7 @@
 
 ### By the end:
 Your resume will look something like this
-![](http://i.imgur.com/pWU1Xbl.png)
+![](http://imgur.com/CQNjTc3)
 
 And your repository will include the following files:
 
