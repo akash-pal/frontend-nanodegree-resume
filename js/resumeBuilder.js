@@ -56,7 +56,7 @@ var work ={
             "employer": "ALLSpark Learning",
             "title": "Summer Internship : Online Course Creator",
             "date": "June 2014 - July 2014",
-            "location": "Online",
+            "location": "Krishnagar, West Bengal, India",
             "description": "ALLSpark being a multi-featured educational platform ,my work as an intern was to design 4 courses Software Engineering, Operating System, Basic Computing and Web Technology and Basic Computation and Principles of Computer Programming. I design these courses according toa syllabus and it included the study materials, video lectures, notes from various universities and educational institutions all over the world."
         },
         {
@@ -251,3 +251,4 @@ var inName = function(finalName){
     
 }
 
+$("#mapDiv").append(googleMap);
