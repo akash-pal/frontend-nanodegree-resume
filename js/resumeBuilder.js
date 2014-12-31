@@ -47,7 +47,7 @@ var bio ={
         "C++",
         "ASP.NET"
     ],
-    "picture_URL": "images/AkashPal.jpg"
+    "picture_URL": "http://i.imgur.com/dSTJtwe.jpg"
 }
 
 var work ={
